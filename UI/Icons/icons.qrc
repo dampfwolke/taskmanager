@@ -1,0 +1,44 @@
+<RCC>
+  <qresource prefix="Symbole">
+    <file>100-percent.png</file>
+    <file>add.png</file>
+    <file>ai-cloud.png</file>
+    <file>automation.png</file>
+    <file>boom.png</file>
+    <file>checked.png</file>
+    <file>circular-arrows.png</file>
+    <file>close.png</file>
+    <file>close_app.png</file>
+    <file>cuboid.png</file>
+    <file>cylinder.png</file>
+    <file>download.png</file>
+    <file>drilling.png</file>
+    <file>drilling_1.png</file>
+    <file>exit.png</file>
+    <file>expand_menu.png</file>
+    <file>explode.png</file>
+    <file>fired.png</file>
+    <file>folder.png</file>
+    <file>lock.png</file>
+    <file>log-in.png</file>
+    <file>log-out.png</file>
+    <file>logout_2.png</file>
+    <file>radioactive.png</file>
+    <file>radioactive_icon.png</file>
+    <file>research.png</file>
+    <file>rpa.png</file>
+    <file>Save.png</file>
+    <file>search.png</file>
+    <file>settings_2.png</file>
+    <file>shop.png</file>
+    <file>shutdown.png</file>
+    <file>tool_in.png</file>
+    <file>tool_out.png</file>
+    <file>user.png</file>
+    <file>user_admin_2.png</file>
+    <file>user-gear.png</file>
+    <file>vape.png</file>
+    <file>vice(1).png</file>
+    <file>vice.png</file>
+  </qresource>
+</RCC>
