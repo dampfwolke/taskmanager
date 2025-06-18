@@ -32,7 +32,7 @@ class SidePanelAnimator(QObject):
             raise ValueError("Eines oder mehrere Widgets konnten nicht im UI gefunden werden.")
 
         # Animationseinstellungen
-        self.animation_duration = 1250 # in Millisekunden
+        self.animation_duration = 2500 # in Millisekunden
         self.is_expanded = False  # Das Panel startet eingeklappt
 
         # Speichere die ursprüngliche Breite. Wir nehmen die sizeHint.
@@ -40,7 +40,7 @@ class SidePanelAnimator(QObject):
 
         # Stelle sicher, dass die Breite sinnvoll ist, falls sie 0 ist
         if self.expanded_width == 0:
-            self.expanded_width = 600  # Setze einen Standardwert, falls sizeHint nicht ausreicht
+            self.expanded_width = 650  # Setze einen Standardwert, falls sizeHint nicht ausreicht
 
         # Erstelle das Animations-Objekt
         self.animation = QPropertyAnimation(self.animated_widget, b"maximumWidth")
