@@ -14,7 +14,7 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
         super().__init__()
         # setupUi() erstellt alle Widgets aus dem Designer als Attribute von 'self'
         self.setupUi(self)
-        self.resize(325, 500)
+        # self.setMaximumWidth(350)
 
         # --- HIER KOMMT DIE ANIMATION HINZU ---
         # Initialisiere den Animator, nachdem das UI aufgebaut wurde.

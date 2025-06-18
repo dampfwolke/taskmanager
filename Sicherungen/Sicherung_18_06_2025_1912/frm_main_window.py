@@ -24,7 +24,7 @@ class Ui_frm_main_window(object):
     def setupUi(self, frm_main_window):
         if not frm_main_window.objectName():
             frm_main_window.setObjectName(u"frm_main_window")
-        frm_main_window.resize(446, 500)
+        frm_main_window.resize(620, 500)
         font = QFont()
         font.setFamilies([u"Calibri"])
         font.setPointSize(12)
@@ -66,7 +66,7 @@ class Ui_frm_main_window(object):
         self.tb_tasks.setObjectName(u"tb_tasks")
         self.high = QWidget()
         self.high.setObjectName(u"high")
-        self.high.setGeometry(QRect(0, 0, 188, 272))
+        self.high.setGeometry(QRect(0, 0, 290, 272))
         self.verticalLayout = QVBoxLayout(self.high)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.lw_high = QListWidget(self.high)
@@ -144,6 +144,10 @@ class Ui_frm_main_window(object):
 
 
         self.horizontalLayout_3.addWidget(self.wg_main_tasks)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.horizontalSpacer)
 
         self.wg_main_description = QWidget(self.centralwidget)
         self.wg_main_description.setObjectName(u"wg_main_description")
@@ -227,7 +231,7 @@ class Ui_frm_main_window(object):
 
         self.horizontalLayout_3.addWidget(self.wg_main_description)
 
-        self.horizontalSpacer_4 = QSpacerItem(5, 20, QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer_4)
 
