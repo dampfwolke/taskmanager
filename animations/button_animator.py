@@ -66,8 +66,8 @@ class _ButtonAnimationHandler(QObject):
 
         # 1. Geometrie-Animation (hineindrücken)
         original_geo = self.button.geometry()
-        offset = 2
-        shrink = offset * 2
+        offset = 3
+        shrink = offset * 3
 
         pressed_geo = QRect(
             original_geo.x() + offset,

@@ -18,31 +18,21 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
         # Initialisiere den Animator, nachdem das UI aufgebaut wurde.
         self.animator = SidePanelAnimator(
             parent_window=self,  # Übergib die MainWindow-Instanz
-            animated_widget_name="wg_main_description", # Name aus dem Qt Designer
-            toggle_button_name="pb_show_description") # Name aus dem Qt Designer)
+            animated_widget_name="wg_main_description",
+            toggle_button_name="pb_show_description")
 
-        # BUTTON-ANIMATIONEN
-        try:
-            # Liste hier alle Buttons auf, die den Effekt bekommen sollen.
-            # Die Namen müssen exakt mit denen aus dem Qt Designer übereinstimmen.
-            animated_buttons = [
-                "pb_new_task",
-                "pb_show_description", # Ja, auch der kann animiert werden!
-                "pb_finish_task",
-                "pb_edit_task"
-            ]
-            self.button_animator = ButtonAnimator(self, animated_buttons)
-        except Exception as e:
-            print(f"Fehler bei der Initialisierung des Button-Animators: {e}")
+        # BUTTON-ANIMATIONENListe hier alle Buttons auf, die den Effekt bekommen sollen.
+        animated_buttons = [
+            "pb_new_task",
+            "pb_show_description",
+            "pb_finish_task",
+            "pb_edit_task"]
+        self.button_animator = ButtonAnimator(self, animated_buttons)
 
 if __name__ == "__main__":
     app = qtw.QApplication(sys.argv)
     window = MainWindow()
     window.show()
-    # Stylesheet nach dem Anzeigen des Fensters laden, um sicherzustellen, dass es angewendet wird
-    try:
-        with open("UI/Styles/Combinear.qss", "r") as stylesheet_file:
-            app.setStyleSheet(stylesheet_file.read())
-    except FileNotFoundError:
-        print("Stylesheet-Datei 'UI/Styles/Combinear.qss' nicht gefunden.")
+    with open("UI/Styles/Combinear.qss", "r") as stylesheet_file:
+        app.setStyleSheet(stylesheet_file.read())
     sys.exit(app.exec())
