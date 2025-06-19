@@ -1,0 +1,52 @@
+from pathlib import Path
+import json
+
+from task import Task
+from timestamp import timestamp
+
+class ManageTasks:
+
+    SAVE_PATH_DIR = Path(__file__).parent.parent.resolve() / "data"
+    SAVE_PATH_FILE  = SAVE_PATH_DIR / "save_file.json"
+
+    def __init__(self):
+        self.current_task_list = []
+        self.save_task_list = []
+        self.loaded_task_list = []
+
+    def save_to_json(self,* args) -> None:
+        """Speichert ein, oder mehrere, Task()-Objekte als list mit dictionaries in eine JSON Datei.
+        Der Pfad ist 'taskmanager/data/save_file.json'"""
+        self.current_task_list.append(args)
+        try:
+            with open(self.SAVE_PATH_FILE, "w", encoding="utf-8") as f:
+                json.dump(self.current_task_list[0], f, indent=4)
+                print(f"JSON Datei erfolgreich gespeichert. {timestamp(1)}")
+        except FileNotFoundError as e:
+            print(f"Datei {self.SAVE_PATH_FILE} konnte nicht gefunden werden. {e}")
+        except TypeError as e:
+            print(f"Daten konnten nicht in JSON umgewandelt werden. {e}")
+        except Exception as e:
+            print(f"Unbekannter Fehler bei 'Task.save_to_json'. {e}")
+
+    def load_from_json(self) -> None:
+        """Lädt ein Task()-Objekt als dictionary von einer JSON Datei.
+        Der Pfad ist 'taskmanager/data/save_file.json'
+        Speichert das dictionary in eine list (self.loaded_tasks)."""
+        try:
+            with open(self.SAVE_PATH_FILE, "r", encoding="utf-8") as f:
+                reader = json.load(f)
+                self.current_task_list.append(reader)
+                print(f"JSON Datei erfolgreich geladen. {timestamp(1)}")
+        except FileNotFoundError as e:
+            print(f"Datei {self.SAVE_PATH_FILE} konnte nicht gefunden werden. {e}")
+        except Exception as e:
+            print(f"Unbekannter Fehler beim Laden der JSON Datei. {e}")
+
+
+if __name__ == "__main__":
+    taskmanager_1 = ManageTasks()
+    task1 = Task("Aufräumen", "Abwaschen dann Staubsaugen", "wichtig")
+    task2 = Task("Wartung Dampfer", "Watte und Coil wechseln", "wichtig")
+    taskmanager_1.save_to_json(task1.task_dict, task2.task_dict)
+
