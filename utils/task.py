@@ -13,6 +13,7 @@ class Task:
         self.task_dict = self.create_task_dict()
 
     def create_task_dict(self) -> dict:
+        """Returned ein dict mit allen daten der Aufgabe."""
         task_dict = {"title": self.title, "description": self.description,
                      "category": self.category,
                      "status": self.status,
