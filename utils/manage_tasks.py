@@ -11,7 +11,7 @@ class ManageTasks:
 
     def __init__(self):
         self.current_task_list = []
-        self.loaded_task_list = self.load_from_json()
+        self.loaded_task_list = []
 
     def append_tasks_to_list(self):
         pass
@@ -21,7 +21,7 @@ class ManageTasks:
         Der Pfad ist 'taskmanager/data/save_file.json'"""
         try:
             with open(self.SAVE_PATH_FILE, "w", encoding="utf-8") as f:
-                json.dump(self.current_task_list[0], f, indent=4)
+                json.dump(self.current_task_list, f, indent=4)
                 print(f"JSON Datei erfolgreich gespeichert. {timestamp(1)}")
         except FileNotFoundError as e:
             print(f"Datei {self.SAVE_PATH_FILE} konnte nicht gefunden werden. {e}")
@@ -37,7 +37,6 @@ class ManageTasks:
         try:
             with open(self.SAVE_PATH_FILE, "r", encoding="utf-8") as f:
                 reader = json.load(f)
-                # self.loaded_task_list.append(reader)
                 print(f"JSON Datei erfolgreich geladen. {timestamp(1)}")
                 return reader
         except FileNotFoundError as e:
@@ -51,6 +50,7 @@ class ManageTasks:
 if __name__ == "__main__":
     taskmanager_1 = ManageTasks()
     # task1 = Task("Aufräumen", "Abwaschen dann Staubsaugen", "wichtig")
-    # task2 = Task("Wartung Dampfer", "Watte und Coil wechseln", "wichtig")
-    # print(taskmanager_1.loaded_task_list)
+    task2 = Task("Wartung Dampfer", "Watte und Coil wechseln", "wichtig")
+    taskmanager_1.save_to_json()
+
 

@@ -6,13 +6,5 @@
         "status": "in Bearbeitung",
         "due_date": null,
         "creation_date": "2025-06-19 15:35:00"
-    },
-    {
-        "title": "Wartung Dampfer",
-        "description": "Watte und Coil wechseln",
-        "category": "wichtig",
-        "status": "in Bearbeitung",
-        "due_date": null,
-        "creation_date": "2025-06-19 15:35:00"
     }
 ]
