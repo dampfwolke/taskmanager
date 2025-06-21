@@ -1,11 +1,19 @@
 [
     {
+        "title": "Pgm-\u00c4nderung IFW",
+        "description": "Kulisse Pgm anpassen",
+        "category": "niedrig",
+        "status": "Erledigt",
+        "due_date": null,
+        "creation_date": "2025-06-21 19:13:18"
+    },
+    {
         "title": "Nacharbeit",
         "description": "NA-Pgm Gtech erstellen",
         "category": "wichtig",
         "status": "in Bearbeitung",
         "due_date": null,
-        "creation_date": "2025-06-20 21:05:52"
+        "creation_date": "2025-06-21 19:13:18"
     },
     {
         "title": "Aufr\u00e4umen",
@@ -13,7 +21,7 @@
         "category": "wichtig",
         "status": "in Bearbeitung",
         "due_date": null,
-        "creation_date": "2025-06-20 20:32:47"
+        "creation_date": "2025-06-21 19:13:18"
     },
     {
         "title": "Wartung Dampfer",
@@ -21,6 +29,6 @@
         "category": "wichtig",
         "status": "in Bearbeitung",
         "due_date": null,
-        "creation_date": "2025-06-20 20:32:47"
+        "creation_date": "2025-06-21 19:13:18"
     }
 ]

@@ -11,6 +11,12 @@ class Task:
         self.due_date = due_date
         self.creation_date = timestamp(3)
 
+    def show_info(self) -> str:
+        return f"{self.title}, {self.description}, {self.category}, {self.status}, {self.due_date}, {self.creation_date}"
+
+    def update_status(self, status="Erledigt") -> None:
+        self.status = status
+
     def create_task_dict(self) -> dict:
         """Returned ein dict mit allen Daten der Aufgabe."""
         task_dict = {"title": self.title, "description": self.description,
@@ -37,3 +43,4 @@ class Task:
 if __name__ == "__main__":
     task1 = Task("Aufräumen", "Abwaschen dann Staubsaugen", "wichtig")
     task2 = Task("Wartung Dampfer", "Watte und Coil wechseln", "wichtig")
+
