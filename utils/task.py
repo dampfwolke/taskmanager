@@ -1,4 +1,5 @@
 from timestamp import timestamp
+import json
 
 class Task:
 
@@ -10,10 +11,8 @@ class Task:
         self.due_date = due_date
         self.creation_date = timestamp(3)
 
-        self.task_dict = self.create_task_dict()
-
     def create_task_dict(self) -> dict:
-        """Returned ein dict mit allen daten der Aufgabe."""
+        """Returned ein dict mit allen Daten der Aufgabe."""
         task_dict = {"title": self.title, "description": self.description,
                      "category": self.category,
                      "status": self.status,
@@ -21,11 +20,20 @@ class Task:
                      "creation_date": self.creation_date}
         return task_dict
 
+    @classmethod
+    def json_to_task(cls, json_data: dict) -> "task: Task":
+        """Erstellt aus einem dict wieder ein Task-Objekt."""
+        return cls(title=json_data["title"],
+                   description=json_data["description"],
+                   category=json_data["category"],
+                   status=json_data.get("status"),
+                   due_date=json_data.get("due_date")
+                   )
+
     def __repr__(self):
-        return f'ManageTask("{self.title}", "{self.description}", "{self.category}")'
+        return f'Task("{self.title}", "{self.description}", "{self.category}")'
 
 
 if __name__ == "__main__":
     task1 = Task("Aufräumen", "Abwaschen dann Staubsaugen", "wichtig")
     task2 = Task("Wartung Dampfer", "Watte und Coil wechseln", "wichtig")
-    print(task2.task_dict)

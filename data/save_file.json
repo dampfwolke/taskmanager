@@ -1,10 +1,26 @@
 [
     {
+        "title": "Nacharbeit",
+        "description": "NA-Pgm Gtech erstellen",
+        "category": "wichtig",
+        "status": "in Bearbeitung",
+        "due_date": null,
+        "creation_date": "2025-06-20 21:05:52"
+    },
+    {
         "title": "Aufr\u00e4umen",
         "description": "Abwaschen dann Staubsaugen",
         "category": "wichtig",
         "status": "in Bearbeitung",
         "due_date": null,
-        "creation_date": "2025-06-19 15:35:00"
+        "creation_date": "2025-06-20 20:32:47"
+    },
+    {
+        "title": "Wartung Dampfer",
+        "description": "Watte und Coil wechseln",
+        "category": "wichtig",
+        "status": "in Bearbeitung",
+        "due_date": null,
+        "creation_date": "2025-06-20 20:32:47"
     }
 ]
