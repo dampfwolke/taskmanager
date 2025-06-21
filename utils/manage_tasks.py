@@ -55,8 +55,6 @@ if __name__ == "__main__":
     # task1 = Task("Nacharbeit", "NA-Pgm Gtech erstellen", "wichtig")
     # task2 = Task("Pgm-Änderung IFW", "Kulisse Pgm anpassen", "niedrig")
 
-
-
-
-
-
+    tm.load_from_json()
+    for i in tm.task_list:
+        print(i)

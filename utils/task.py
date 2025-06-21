@@ -38,6 +38,8 @@ class Task:
     def __repr__(self):
         return f'Task("{self.title}", "{self.description}", "{self.category}")'
 
+    def __str__(self):
+        return f"Titel: {self.title}, Beschreibung: {self.description}, Kategorie: {self.category}, Status: {self.status}, Termin: {self.due_date}, Erstellt am: {self.creation_date}"
 
 if __name__ == "__main__":
     task1 = Task("Aufräumen", "Abwaschen dann Staubsaugen", "wichtig")
