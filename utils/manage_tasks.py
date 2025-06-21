@@ -13,8 +13,8 @@ class ManageTasks:
         self.task_list = []
 
     def append_task(self, *tasks: Task):
-        for tasks in tasks:
-            self.task_list.append(tasks)
+        for task_ in tasks:
+            self.task_list.append(task_)
 
     def save_to_json(self) -> None:
         """Kombiniert den Inhalt der self.current_task_list und self.loaded_task_list und speichert die neue list von dictionaries

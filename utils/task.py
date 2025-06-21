@@ -1,5 +1,4 @@
 from timestamp import timestamp
-import json
 
 class Task:
 
@@ -27,7 +26,7 @@ class Task:
         return task_dict
 
     @classmethod
-    def json_to_task(cls, json_data: dict) -> "task: Task":
+    def json_to_task(cls, json_data: dict) -> "Task":
         """Erstellt aus einem dict wieder ein Task-Objekt."""
         return cls(title=json_data["title"],
                    description=json_data["description"],
