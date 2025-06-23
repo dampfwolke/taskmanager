@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>542</width>
-    <height>729</height>
+    <height>721</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -271,6 +271,9 @@
            <property name="text">
             <string>Termin festlegen</string>
            </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
         </layout>
@@ -288,7 +291,7 @@
          <item>
           <widget class="QDateEdit" name="ded_description">
            <property name="readOnly">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="calendarPopup">
             <bool>true</bool>
@@ -305,7 +308,13 @@
          <item>
           <widget class="QTimeEdit" name="ted_description">
            <property name="readOnly">
+            <bool>false</bool>
+           </property>
+           <property name="calendarPopup">
             <bool>true</bool>
+           </property>
+           <property name="currentSectionIndex">
+            <number>0</number>
            </property>
            <property name="time">
             <time>
@@ -460,7 +469,7 @@
    <sender>cbx_show_timeedit</sender>
    <signal>clicked(bool)</signal>
    <receiver>wg_time_expand</receiver>
-   <slot>setHidden(bool)</slot>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
      <x>270</x>
@@ -469,6 +478,22 @@
     <hint type="destinationlabel">
      <x>270</x>
      <y>632</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fcb_description</sender>
+   <signal>currentFontChanged(QFont)</signal>
+   <receiver>te_description</receiver>
+   <slot>setCurrentFont(QFont)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>270</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>270</x>
+     <y>289</y>
     </hint>
    </hints>
   </connection>

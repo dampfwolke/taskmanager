@@ -25,7 +25,7 @@ class Ui_frm_new_task(object):
     def setupUi(self, frm_new_task):
         if not frm_new_task.objectName():
             frm_new_task.setObjectName(u"frm_new_task")
-        frm_new_task.resize(542, 729)
+        frm_new_task.resize(542, 721)
         self.verticalLayout_3 = QVBoxLayout(frm_new_task)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.wg_main_new_task = QWidget(frm_new_task)
@@ -162,6 +162,7 @@ class Ui_frm_new_task(object):
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.cbx_show_timeedit = QCheckBox(self.wg_time)
         self.cbx_show_timeedit.setObjectName(u"cbx_show_timeedit")
+        self.cbx_show_timeedit.setChecked(False)
 
         self.horizontalLayout_5.addWidget(self.cbx_show_timeedit)
 
@@ -175,7 +176,7 @@ class Ui_frm_new_task(object):
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.ded_description = QDateEdit(self.wg_time_expand)
         self.ded_description.setObjectName(u"ded_description")
-        self.ded_description.setReadOnly(True)
+        self.ded_description.setReadOnly(False)
         self.ded_description.setCalendarPopup(True)
         self.ded_description.setDate(QDate(2025, 6, 19))
 
@@ -183,7 +184,9 @@ class Ui_frm_new_task(object):
 
         self.ted_description = QTimeEdit(self.wg_time_expand)
         self.ted_description.setObjectName(u"ted_description")
-        self.ted_description.setReadOnly(True)
+        self.ted_description.setReadOnly(False)
+        self.ted_description.setCalendarPopup(True)
+        self.ted_description.setCurrentSectionIndex(0)
         self.ted_description.setTime(QTime(10, 20, 0))
 
         self.horizontalLayout_4.addWidget(self.ted_description)
@@ -239,7 +242,8 @@ class Ui_frm_new_task(object):
 
         self.retranslateUi(frm_new_task)
         self.pb_close.clicked.connect(frm_new_task.close)
-        self.cbx_show_timeedit.clicked["bool"].connect(self.wg_time_expand.setHidden)
+        self.cbx_show_timeedit.clicked["bool"].connect(self.wg_time_expand.setVisible)
+        self.fcb_description.currentFontChanged.connect(self.te_description.setCurrentFont)
 
         QMetaObject.connectSlotsByName(frm_new_task)
     # setupUi
