@@ -41,6 +41,6 @@ if __name__ == "__main__":
     app = qtw.QApplication(sys.argv)
     window = MainWindow()
     window.show()
-    with open("UI/Styles/Combinear.qss", "r") as stylesheet_file:
+    with open("UI/Styles/Adapticisi.qss", "r") as stylesheet_file:
         app.setStyleSheet(stylesheet_file.read())
     sys.exit(app.exec())
