@@ -68,12 +68,12 @@ class Ui_frm_main_window(object):
 
         self.tb_tasks = QToolBox(self.wg_main_tasks)
         self.tb_tasks.setObjectName(u"tb_tasks")
-        self.high = QWidget()
-        self.high.setObjectName(u"high")
-        self.high.setGeometry(QRect(0, 0, 252, 272))
-        self.verticalLayout = QVBoxLayout(self.high)
+        self.work = QWidget()
+        self.work.setObjectName(u"work")
+        self.work.setGeometry(QRect(0, 0, 252, 272))
+        self.verticalLayout = QVBoxLayout(self.work)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.lw_high = QListWidget(self.high)
+        self.lw_high = QListWidget(self.work)
         QListWidgetItem(self.lw_high)
         QListWidgetItem(self.lw_high)
         QListWidgetItem(self.lw_high)
@@ -83,13 +83,13 @@ class Ui_frm_main_window(object):
 
         self.verticalLayout.addWidget(self.lw_high)
 
-        self.tb_tasks.addItem(self.high, u"Hoch")
-        self.medium = QWidget()
-        self.medium.setObjectName(u"medium")
-        self.medium.setGeometry(QRect(0, 0, 252, 272))
-        self.verticalLayout_2 = QVBoxLayout(self.medium)
+        self.tb_tasks.addItem(self.work, u"Arbeit")
+        self.home = QWidget()
+        self.home.setObjectName(u"home")
+        self.home.setGeometry(QRect(0, 0, 252, 272))
+        self.verticalLayout_2 = QVBoxLayout(self.home)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.lw_medium = QListWidget(self.medium)
+        self.lw_medium = QListWidget(self.home)
         QListWidgetItem(self.lw_medium)
         QListWidgetItem(self.lw_medium)
         QListWidgetItem(self.lw_medium)
@@ -100,13 +100,13 @@ class Ui_frm_main_window(object):
 
         self.verticalLayout_2.addWidget(self.lw_medium)
 
-        self.tb_tasks.addItem(self.medium, u"Mittel")
-        self.low = QWidget()
-        self.low.setObjectName(u"low")
-        self.low.setGeometry(QRect(0, 0, 252, 272))
-        self.verticalLayout_3 = QVBoxLayout(self.low)
+        self.tb_tasks.addItem(self.home, u"zu Hause")
+        self.finished_tasks = QWidget()
+        self.finished_tasks.setObjectName(u"finished_tasks")
+        self.finished_tasks.setGeometry(QRect(0, 0, 252, 272))
+        self.verticalLayout_3 = QVBoxLayout(self.finished_tasks)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.lw_low = QListWidget(self.low)
+        self.lw_low = QListWidget(self.finished_tasks)
         QListWidgetItem(self.lw_low)
         QListWidgetItem(self.lw_low)
         QListWidgetItem(self.lw_low)
@@ -115,7 +115,7 @@ class Ui_frm_main_window(object):
 
         self.verticalLayout_3.addWidget(self.lw_low)
 
-        self.tb_tasks.addItem(self.low, u"Niedrig")
+        self.tb_tasks.addItem(self.finished_tasks, u"erledigte Aufgaben")
 
         self.verticalLayout_5.addWidget(self.tb_tasks)
 
@@ -246,7 +246,7 @@ class Ui_frm_main_window(object):
 
         self.retranslateUi(frm_main_window)
 
-        self.tb_tasks.setCurrentIndex(0)
+        self.tb_tasks.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(frm_main_window)
@@ -268,7 +268,7 @@ class Ui_frm_main_window(object):
         ___qlistwidgetitem3.setText(QCoreApplication.translate("frm_main_window", u"Element_4", None));
         self.lw_high.setSortingEnabled(__sortingEnabled)
 
-        self.tb_tasks.setItemText(self.tb_tasks.indexOf(self.high), QCoreApplication.translate("frm_main_window", u"Hoch", None))
+        self.tb_tasks.setItemText(self.tb_tasks.indexOf(self.work), QCoreApplication.translate("frm_main_window", u"Arbeit", None))
 
         __sortingEnabled1 = self.lw_medium.isSortingEnabled()
         self.lw_medium.setSortingEnabled(False)
@@ -286,7 +286,7 @@ class Ui_frm_main_window(object):
         ___qlistwidgetitem9.setText(QCoreApplication.translate("frm_main_window", u"Element_6", None));
         self.lw_medium.setSortingEnabled(__sortingEnabled1)
 
-        self.tb_tasks.setItemText(self.tb_tasks.indexOf(self.medium), QCoreApplication.translate("frm_main_window", u"Mittel", None))
+        self.tb_tasks.setItemText(self.tb_tasks.indexOf(self.home), QCoreApplication.translate("frm_main_window", u"zu Hause", None))
 
         __sortingEnabled2 = self.lw_low.isSortingEnabled()
         self.lw_low.setSortingEnabled(False)
@@ -300,7 +300,7 @@ class Ui_frm_main_window(object):
         ___qlistwidgetitem13.setText(QCoreApplication.translate("frm_main_window", u"Element_4", None));
         self.lw_low.setSortingEnabled(__sortingEnabled2)
 
-        self.tb_tasks.setItemText(self.tb_tasks.indexOf(self.low), QCoreApplication.translate("frm_main_window", u"Niedrig", None))
+        self.tb_tasks.setItemText(self.tb_tasks.indexOf(self.finished_tasks), QCoreApplication.translate("frm_main_window", u"erledigte Aufgaben", None))
         self.pb_new_task.setText(QCoreApplication.translate("frm_main_window", u"Neue Aufgabe", None))
         self.pb_show_description.setText(QCoreApplication.translate("frm_main_window", u"Detailansicht", None))
         self.lb_description.setText(QCoreApplication.translate("frm_main_window", u"Beschreibung", None))

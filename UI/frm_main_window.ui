@@ -96,9 +96,9 @@
        <item>
         <widget class="QToolBox" name="tb_tasks">
          <property name="currentIndex">
-          <number>0</number>
+          <number>2</number>
          </property>
-         <widget class="QWidget" name="high">
+         <widget class="QWidget" name="work">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -108,7 +108,7 @@
            </rect>
           </property>
           <attribute name="label">
-           <string>Hoch</string>
+           <string>Arbeit</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout">
            <item>
@@ -140,7 +140,7 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="medium">
+         <widget class="QWidget" name="home">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -150,7 +150,7 @@
            </rect>
           </property>
           <attribute name="label">
-           <string>Mittel</string>
+           <string>zu Hause</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <item>
@@ -189,7 +189,7 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="low">
+         <widget class="QWidget" name="finished_tasks">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -199,7 +199,7 @@
            </rect>
           </property>
           <attribute name="label">
-           <string>Niedrig</string>
+           <string>erledigte Aufgaben</string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>

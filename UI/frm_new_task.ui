@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>542</width>
-    <height>721</height>
+    <width>470</width>
+    <height>689</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -196,6 +196,11 @@
            </item>
            <item>
             <property name="text">
+             <string>unterbrochen</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
              <string>noch nicht angefangen</string>
             </property>
            </item>
@@ -239,6 +244,13 @@
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
           <widget class="QLabel" name="lb_description">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>12</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="text">
             <string>Beschreibung der Aufgabe:</string>
            </property>

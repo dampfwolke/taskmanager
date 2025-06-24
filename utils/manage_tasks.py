@@ -1,8 +1,8 @@
 from pathlib import Path
 import json
 
-from task import Task
-from timestamp import timestamp
+from utils.task import Task
+from utils.timestamp import timestamp
 
 class ManageTasks:
 

@@ -1,20 +1,32 @@
 import sys
 
 from PySide6 import QtWidgets as qtw
+from PySide6 import QtCore as qtc
 
 from UI.frm_new_task import Ui_frm_new_task
 from animations.button_animator import ButtonAnimator
+
+from utils.task import Task
+from utils.manage_tasks import ManageTasks
 
 class NewTask(qtw.QWidget, Ui_frm_new_task):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.wg_time_expand.setHidden(True)
 
         # Animationen
         animated_buttons = ["pb_close", "pb_finish_task", "pb_create_task"]
         self.button_animator = ButtonAnimator(self, animated_buttons)
 
-        self.wg_time_expand.setHidden(True)
+        # Verbinde Signale
+        self.pb_finish_task.clicked.connect(self.finish_task)
+
+    @qtc.Slot()
+    def finish_task(self):
+        self.cb_status.setCurrentIndex(3)
+        self.cb_category.setCurrentText("Erledigte Aufgaben")
+
 
 
 if __name__ == "__main__":

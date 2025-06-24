@@ -1,4 +1,4 @@
-from timestamp import timestamp
+from utils.timestamp import timestamp
 
 class Task:
 
@@ -15,6 +15,9 @@ class Task:
 
     def update_status(self, status="Erledigt") -> None:
         self.status = status
+
+    def update_category(self, category):
+        self.category = category
 
     def create_task_dict(self) -> dict:
         """Returned ein dict mit allen Daten der Aufgabe."""

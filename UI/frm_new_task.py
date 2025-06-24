@@ -25,7 +25,7 @@ class Ui_frm_new_task(object):
     def setupUi(self, frm_new_task):
         if not frm_new_task.objectName():
             frm_new_task.setObjectName(u"frm_new_task")
-        frm_new_task.resize(542, 721)
+        frm_new_task.resize(470, 689)
         self.verticalLayout_3 = QVBoxLayout(frm_new_task)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.wg_main_new_task = QWidget(frm_new_task)
@@ -117,6 +117,7 @@ class Ui_frm_new_task(object):
         self.cb_status.addItem("")
         self.cb_status.addItem("")
         self.cb_status.addItem("")
+        self.cb_status.addItem("")
         self.cb_status.setObjectName(u"cb_status")
         self.cb_status.setMinimumSize(QSize(200, 0))
 
@@ -138,6 +139,11 @@ class Ui_frm_new_task(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.lb_description = QLabel(self.fr_description)
         self.lb_description.setObjectName(u"lb_description")
+        font2 = QFont()
+        font2.setFamilies([u"Calibri"])
+        font2.setPointSize(12)
+        font2.setBold(True)
+        self.lb_description.setFont(font2)
 
         self.verticalLayout.addWidget(self.lb_description)
 
@@ -258,8 +264,9 @@ class Ui_frm_new_task(object):
 
         self.lb_status.setText(QCoreApplication.translate("frm_new_task", u"Status:", None))
         self.cb_status.setItemText(0, QCoreApplication.translate("frm_new_task", u"in Bearbeitung", None))
-        self.cb_status.setItemText(1, QCoreApplication.translate("frm_new_task", u"noch nicht angefangen", None))
-        self.cb_status.setItemText(2, QCoreApplication.translate("frm_new_task", u"Erledigt", None))
+        self.cb_status.setItemText(1, QCoreApplication.translate("frm_new_task", u"unterbrochen", None))
+        self.cb_status.setItemText(2, QCoreApplication.translate("frm_new_task", u"noch nicht angefangen", None))
+        self.cb_status.setItemText(3, QCoreApplication.translate("frm_new_task", u"Erledigt", None))
 
         self.lb_description.setText(QCoreApplication.translate("frm_new_task", u"Beschreibung der Aufgabe:", None))
         self.cbx_show_timeedit.setText(QCoreApplication.translate("frm_new_task", u"Termin festlegen", None))
