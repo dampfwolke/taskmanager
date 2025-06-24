@@ -17,7 +17,7 @@ class NewTask(qtw.QWidget, Ui_frm_new_task):
         self.ded_description.setDate(qtc.QDate.currentDate())
         self.ted_description.setTime(qtc.QTime.currentTime())
 
-        # Animationen
+        # Animationen Buttons
         animated_buttons = ["pb_close", "pb_finish_task", "pb_create_task"]
         self.button_animator = ButtonAnimator(self, animated_buttons)
 

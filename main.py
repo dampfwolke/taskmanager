@@ -21,7 +21,7 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
 
         # Initialisiere den Animator, nachdem das UI aufgebaut wurde.
         self.animator = SidePanelAnimator(parent_window=self, animated_widget_name="wg_main_description", toggle_button_name="pb_show_description")
-        # BUTTON-ANIMATIONENListe hier alle Buttons auf, die den Effekt bekommen sollen.
+        # BUTTON-ANIMATIONEN Liste hier alle Buttons auf, die den Effekt bekommen sollen.
         animated_buttons = ["pb_new_task", "pb_show_description", "pb_finish_task", "pb_edit_task"]
         self.button_animator = ButtonAnimator(self, animated_buttons)
 
