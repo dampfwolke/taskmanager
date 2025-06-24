@@ -1,7 +1,7 @@
 import sys
 
 from PySide6 import QtWidgets as qtw
-from PySide6 import QtCore as qtg
+from PySide6 import QtCore as qtc
 
 from UI.frm_main_window import Ui_frm_main_window
 from animations.animation_handler import SidePanelAnimator
@@ -16,6 +16,9 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
         self.setupUi(self)
         self.frm_new_task = NewTask()
         self.resize(360, 500)
+        self.ded_description.setDate(qtc.QDate.currentDate())
+        self.ted_description.setTime(qtc.QTime.currentTime())
+
         # Initialisiere den Animator, nachdem das UI aufgebaut wurde.
         self.animator = SidePanelAnimator(parent_window=self, animated_widget_name="wg_main_description", toggle_button_name="pb_show_description")
         # BUTTON-ANIMATIONENListe hier alle Buttons auf, die den Effekt bekommen sollen.
@@ -26,7 +29,7 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
         self.pb_new_task.clicked.connect(self.execute_new_task)
 
 
-    @qtg.Slot()
+    @qtc.Slot()
     def execute_new_task(self):
         if self.frm_new_task:
             self.frm_new_task.close()

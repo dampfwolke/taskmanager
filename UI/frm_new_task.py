@@ -89,6 +89,7 @@ class Ui_frm_new_task(object):
         self.cb_category = QComboBox(self.wg_category)
         self.cb_category.addItem("")
         self.cb_category.addItem("")
+        self.cb_category.addItem("")
         self.cb_category.setObjectName(u"cb_category")
         self.cb_category.setMinimumSize(QSize(200, 0))
 
@@ -260,7 +261,8 @@ class Ui_frm_new_task(object):
         self.lb_title.setText(QCoreApplication.translate("frm_new_task", u"Name:", None))
         self.lb_category.setText(QCoreApplication.translate("frm_new_task", u"Kategorie:", None))
         self.cb_category.setItemText(0, QCoreApplication.translate("frm_new_task", u"Arbeit", None))
-        self.cb_category.setItemText(1, QCoreApplication.translate("frm_new_task", u"Zu Hause", None))
+        self.cb_category.setItemText(1, QCoreApplication.translate("frm_new_task", u"zu Hause", None))
+        self.cb_category.setItemText(2, QCoreApplication.translate("frm_new_task", u"erledigte Aufgaben", None))
 
         self.lb_status.setText(QCoreApplication.translate("frm_new_task", u"Status:", None))
         self.cb_status.setItemText(0, QCoreApplication.translate("frm_new_task", u"in Bearbeitung", None))

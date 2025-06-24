@@ -132,7 +132,12 @@
            </item>
            <item>
             <property name="text">
-             <string>Zu Hause</string>
+             <string>zu Hause</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>erledigte Aufgaben</string>
             </property>
            </item>
           </widget>

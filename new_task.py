@@ -14,6 +14,8 @@ class NewTask(qtw.QWidget, Ui_frm_new_task):
         super().__init__()
         self.setupUi(self)
         self.wg_time_expand.setHidden(True)
+        self.ded_description.setDate(qtc.QDate.currentDate())
+        self.ted_description.setTime(qtc.QTime.currentTime())
 
         # Animationen
         animated_buttons = ["pb_close", "pb_finish_task", "pb_create_task"]
@@ -25,7 +27,7 @@ class NewTask(qtw.QWidget, Ui_frm_new_task):
     @qtc.Slot()
     def finish_task(self):
         self.cb_status.setCurrentIndex(3)
-        self.cb_category.setCurrentText("Erledigte Aufgaben")
+        self.cb_category.setCurrentIndex(2)
 
 
 
