@@ -108,7 +108,7 @@ class EverythingSearchGUI(QWidget):
         self.filename_label = QLabel("Dateiname:")
         self.filename_input = QLineEdit()
         self.filename_input.setPlaceholderText("Teil des Dateinamens...")
-        self.filename_input.textEdited.connect(self.search_triggered)
+        self.filename_input.editingFinished.connect(self.search_triggered)
 
         self.extension_label = QLabel("Endung (z.B. .txt):")
         self.extension_input = QLineEdit()
@@ -209,7 +209,8 @@ class EverythingSearchGUI(QWidget):
         return found_files
 
     def _format_and_display_results(self, results):
-        self.results_count_label.setText(f"Dateien gefunden: {len(results)}")
+        # self.results_count_label.setText(f"Dateien gefunden: {len(results)}")
+        self.results_count_label.setText(f"Programm vorhanden! Stehend fräsen??? Anzahl Programme: {len(results)}")
         if not results:
             self.results_display.clear()
             return
