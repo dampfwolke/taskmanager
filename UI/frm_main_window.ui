@@ -96,7 +96,7 @@
        <item>
         <widget class="QToolBox" name="tb_tasks">
          <property name="currentIndex">
-          <number>2</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="work">
           <property name="geometry">
@@ -104,7 +104,7 @@
             <x>0</x>
             <y>0</y>
             <width>252</width>
-            <height>272</height>
+            <height>238</height>
            </rect>
           </property>
           <attribute name="label">
@@ -112,30 +112,10 @@
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout">
            <item>
-            <widget class="QListWidget" name="lw_high">
+            <widget class="QListWidget" name="lw_work">
              <property name="layoutDirection">
               <enum>Qt::LayoutDirection::LeftToRight</enum>
              </property>
-             <item>
-              <property name="text">
-               <string>Element_1</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Element_2</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Element_3</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Element_4</string>
-              </property>
-             </item>
             </widget>
            </item>
           </layout>
@@ -146,7 +126,7 @@
             <x>0</x>
             <y>0</y>
             <width>252</width>
-            <height>272</height>
+            <height>238</height>
            </rect>
           </property>
           <attribute name="label">
@@ -154,38 +134,25 @@
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <item>
-            <widget class="QListWidget" name="lw_medium">
-             <item>
-              <property name="text">
-               <string>Element_1</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Element_2</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Element_3</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Element_4</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Element_5</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Element_6</string>
-              </property>
-             </item>
-            </widget>
+            <widget class="QListWidget" name="lw_home"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="other">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>252</width>
+            <height>238</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Sonstige</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QListWidget" name="lw_other"/>
            </item>
           </layout>
          </widget>
@@ -195,7 +162,7 @@
             <x>0</x>
             <y>0</y>
             <width>252</width>
-            <height>272</height>
+            <height>238</height>
            </rect>
           </property>
           <attribute name="label">
@@ -203,28 +170,7 @@
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
-            <widget class="QListWidget" name="lw_low">
-             <item>
-              <property name="text">
-               <string>Element_1</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Element_2</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Element_3</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Element_4</string>
-              </property>
-             </item>
-            </widget>
+            <widget class="QListWidget" name="lw_finished"/>
            </item>
           </layout>
          </widget>
