@@ -1,19 +1,14 @@
-# --- START OF FILE task.py ---
-
 from utils.timestamp import timestamp
 
 class Task:
 
-    # GEÄNDERT: __init__ korrigiert, um das Überschreiben des Erstellungsdatums zu verhindern
-    def __init__(self, title: str, description: str, category: str, status: str="in Bearbeitung", due_date: str=None, creation_date: str=None):
+    def __init__(self, title: str, 	description: str, category: str, status: str="in Bearbeitung", due_date: str=None):
         self.title = title
         self.description = description
         self.category = category
         self.status = status
         self.due_date = due_date
-        # Wenn kein Erstellungsdatum übergeben wird (neue Aufgabe), erstelle ein neues.
-        # Andernfalls (beim Laden aus JSON), verwende das übergebene Datum.
-        self.creation_date = creation_date if creation_date is not None else timestamp(3)
+        self.creation_date = timestamp(3)
 
     def show_info(self) -> str:
         return f"{self.title}, {self.description}, {self.category}, {self.status}, {self.due_date}, {self.creation_date}"
@@ -40,17 +35,16 @@ class Task:
                    description=json_data["description"],
                    category=json_data["category"],
                    status=json_data.get("status"),
-                   due_date=json_data.get("due_date"),
-                   # NEU: Das Erstellungsdatum wird aus der JSON-Datei gelesen und übergeben
-                   creation_date=json_data.get("creation_date")
+                   due_date=json_data.get("due_date")
                    )
 
     def __repr__(self):
-        return f'Task("{self.title}")'
+        return f'Task("{self.title}", "{self.description}", "{self.category}")'
 
     def __str__(self):
-        return f"Titel: {self.title}, Kategorie: {self.category}, Status: {self.status}"
+        return f"Titel: {self.title}, Beschreibung: {self.description}, Kategorie: {self.category}, Status: {self.status}, Termin: {self.due_date}, Erstellt am: {self.creation_date}"
 
 if __name__ == "__main__":
     task1 = Task("Aufräumen", "Abwaschen dann Staubsaugen", "wichtig")
     task2 = Task("Wartung Dampfer", "Watte und Coil wechseln", "wichtig")
+

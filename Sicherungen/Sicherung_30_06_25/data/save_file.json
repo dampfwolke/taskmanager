@@ -1,6 +1,6 @@
 [
     {
-        "title": "Pgm-Änderung IFW",
+        "title": "Pgm-\u00c4nderung IFW",
         "description": "Kulisse Pgm anpassen",
         "category": "Arbeit",
         "status": "Erledigt",
@@ -16,8 +16,8 @@
         "creation_date": "2025-06-21 19:13:18"
     },
     {
-        "title": "Aufräumen",
-        "description": "Abwaschen dann Staubsaugen und Fenster putzen",
+        "title": "Aufr\u00e4umen",
+        "description": "Abwaschen dann Staubsaugen",
         "category": "zu Hause",
         "status": "in Bearbeitung",
         "due_date": null,
@@ -30,13 +30,5 @@
         "status": "in Bearbeitung",
         "due_date": null,
         "creation_date": "2025-06-21 19:13:18"
-    },
-    {
-        "title": "Säule programmieren",
-        "description": "G-Tech Säulen  fertig programmieren",
-        "category": "Arbeit",
-        "status": "in Bearbeitung",
-        "due_date": "2025-07-01 12:03:41",
-        "creation_date": "2025-06-30 22:05:24"
     }
 ]

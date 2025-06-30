@@ -1,4 +1,4 @@
-# --- START OF FILE animations/animation_handler.py (DEIN ORIGINAL + hide_panel) ---
+# animations/animation_handler.py (JETZT WIRKLICH FINAL)
 
 from PySide6.QtCore import (
     QObject,
@@ -7,7 +7,7 @@ from PySide6.QtCore import (
     QParallelAnimationGroup,
     QAbstractAnimation,
     QRect,
-    QSize
+    QSize  # <--- WICHTIGER IMPORT HINZUGEFÜGT
 )
 from PySide6.QtWidgets import QLayout
 
@@ -15,7 +15,11 @@ from PySide6.QtWidgets import QLayout
 class SidePanelAnimator(QObject):
     """
     Verwaltet die Animation eines seitlichen Panels und die Größe des Hauptfensters.
-    (Dein Original-Docstring)
+
+    KERNFUNKTION: Deaktiviert temporär die automatische Größenanpassung des
+    Layouts (`setSizeConstraint`), um einen Konflikt zwischen der Animation und dem
+    Layout-Manager zu verhindern. Führt die Fenster- und Panel-Animation
+    parallel für einen flüssigen Effekt aus.
     """
 
     def __init__(self, parent_window, animated_widget_name, toggle_button_name):
@@ -56,7 +60,6 @@ class SidePanelAnimator(QObject):
         self.animation_group.addAnimation(self.window_animation)
 
         # --- Signale verbinden ---
-        # GEÄNDERT: toggle_animation statt toggle_animation
         self.toggle_button.clicked.connect(self.toggle_animation)
         self.animation_group.finished.connect(self.on_animation_finished)
 
@@ -66,7 +69,6 @@ class SidePanelAnimator(QObject):
     def toggle_animation(self):
         """
         Startet die Animation und deaktiviert vorher die Layout-Kontrolle.
-        (Dein Original-Code)
         """
         if self.animation_group.state() == QAbstractAnimation.State.Running:
             return
@@ -79,6 +81,7 @@ class SidePanelAnimator(QObject):
             target_panel_width = 0
             end_geometry = QRect(
                 current_geometry.topLeft(),
+                # *** KORREKTUR HIER: Explizit ein QSize-Objekt erstellen ***
                 QSize(self.collapsed_width, current_geometry.height())
             )
         else:
@@ -86,32 +89,29 @@ class SidePanelAnimator(QObject):
             target_panel_width = self.panel_target_width
             end_geometry = QRect(
                 current_geometry.topLeft(),
+                # *** KORREKTUR HIER: Explizit ein QSize-Objekt erstellen ***
                 QSize(self.expanded_width, current_geometry.height())
             )
 
+        # Animationen mit Start- und Endwerten konfigurieren
         self.panel_animation.setStartValue(self.animated_widget.width())
         self.panel_animation.setEndValue(target_panel_width)
 
         self.window_animation.setStartValue(current_geometry)
         self.window_animation.setEndValue(end_geometry)
 
+        # Zustand für den nächsten Klick umschalten
         self.is_expanded = not self.is_expanded
 
+        # Animation starten
         self.animation_group.start()
 
     def on_animation_finished(self):
         """
         Wird aufgerufen, wenn die Animation beendet ist.
-        (Dein Original-Code)
+        Gibt dem Layout die Kontrolle über die Fenstergröße zurück.
         """
         self.main_layout.setSizeConstraint(self.original_size_constraint)
 
         if not self.is_expanded:
             self.parent_window.setMinimumSize(self.parent_window.sizeHint())
-
-    # <<<< NEU: MINIMALE ERGÄNZUNG >>>>
-    def hide_panel(self):
-        """Schließt das Panel, falls es gerade geöffnet ist."""
-        if self.is_expanded:
-            # Ruft die bestehende Logik auf, um das Panel zu schließen.
-            self.toggle_animation()
