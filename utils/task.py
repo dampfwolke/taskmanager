@@ -1,6 +1,9 @@
 # --- START OF FILE task.py ---
 
+from PySide6.QtCore import QDateTime, QTimeZone
+
 from utils.timestamp import timestamp
+
 
 class Task:
 
@@ -14,6 +17,26 @@ class Task:
         # Wenn kein Erstellungsdatum übergeben wird (neue Aufgabe), erstelle ein neues.
         # Andernfalls (beim Laden aus JSON), verwende das übergebene Datum.
         self.creation_date = creation_date if creation_date is not None else timestamp(3)
+
+    # NEU: Methode zur Überprüfung, ob eine Aufgabe überfällig ist
+    def is_overdue(self) -> bool:
+        """
+        Prüft, ob das Fälligkeitsdatum der Aufgabe in der Vergangenheit liegt.
+        Gibt True zurück, wenn überfällig, sonst False.
+        """
+        if not self.due_date:
+            return False  # Aufgaben ohne Datum können nicht überfällig sein
+
+        try:
+            # Parse den Datums-String in ein QDateTime-Objekt
+            due_datetime = QDateTime.fromString(self.due_date, "yyyy-MM-dd HH:mm:ss")
+            # Hole die aktuelle Zeit
+            now = QDateTime.currentDateTime()
+            # Vergleiche: Ist das Fälligkeitsdatum kleiner als jetzt?
+            return due_datetime < now
+        except Exception:
+            # Falls beim Parsen etwas schiefgeht, betrachte es als nicht überfällig
+            return False
 
     def show_info(self) -> str:
         return f"{self.title}, {self.description}, {self.category}, {self.status}, {self.due_date}, {self.creation_date}"
