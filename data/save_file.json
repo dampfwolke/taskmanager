@@ -61,17 +61,5 @@
         "due_date": "2025-07-01 21:56:19",
         "creation_date": "2025-07-01 21:53:39",
         "font_info": null
-    },
-    {
-        "title": "Test SChriftart",
-        "description": "wefwefsfsdafasf\n\nsadfwefwef",
-        "category": "Arbeit",
-        "status": "in Bearbeitung",
-        "due_date": null,
-        "creation_date": "2025-07-01 22:47:29",
-        "font_info": {
-            "family": "Script MT",
-            "size": 9
-        }
     }
 ]
