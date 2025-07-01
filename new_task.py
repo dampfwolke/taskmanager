@@ -29,22 +29,14 @@ class NewTask(qtw.QDialog, Ui_frm_new_task):
     def __init__(self, task_to_edit: Task = None, parent=None):
         super().__init__(parent)
         self.setupUi(self)
-
+        # NEU: Diese Zeile sorgt dafür, dass das Widget gelöscht wird, wenn es geschlossen wird.
         self.setAttribute(qtc.Qt.WidgetAttribute.WA_DeleteOnClose)
 
-        # Das zu bearbeitende Task-Objekt speichern
         self.current_task = task_to_edit
-
-        # Den Modus basierend auf der Übergabe festlegen
         self.mode = WindowMode.EDIT if self.current_task else WindowMode.CREATE
 
-        # UI für den entsprechenden Modus einrichten
         self._setup_ui_for_mode()
-
-        # Animationen für die Buttons
         self._setup_animations()
-
-        # Signale verbinden
         self._connect_signals()
 
     def _setup_ui_for_mode(self):
@@ -112,10 +104,11 @@ class NewTask(qtw.QDialog, Ui_frm_new_task):
 
     def _connect_signals(self):
         """Verbindet die Signale der UI-Elemente mit den Slots."""
-        # Der Haupt-Button ruft je nach Modus eine andere Aktion auf
         self.pb_create_task.clicked.connect(self.save_or_create_task)
-        # Der Abschließen-Button hat eine eigene Funktion
         self.pb_finish_task.clicked.connect(self.finish_task)
+
+        # NEU: Den "Beenden"-Button mit der close()-Methode verbinden.
+        self.pb_close.clicked.connect(self.close)
 
     @qtc.Slot()
     def save_or_create_task(self):
@@ -166,14 +159,7 @@ class NewTask(qtw.QDialog, Ui_frm_new_task):
 
 if __name__ == "__main__":
     app = qtw.QApplication(sys.argv)
-
-    # Zum Testen des EDIT-Modus
-    # test_task = Task("Test Aufgabe", "Dies ist eine Beschreibung", "Arbeit", due_date="2024-10-29 15:00:00")
-    # window = NewTask(task_to_edit=test_task)
-
-    # Zum Testen des CREATE-Modus
     window = NewTask()
-
     window.show()
     try:
         with open("UI/Styles/Combinear.qss", "r") as stylesheet_file:
