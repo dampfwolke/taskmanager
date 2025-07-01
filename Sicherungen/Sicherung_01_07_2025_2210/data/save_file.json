@@ -5,8 +5,7 @@
         "category": "Arbeit",
         "status": "Erledigt",
         "due_date": null,
-        "creation_date": "2025-06-21 19:13:18",
-        "font_info": null
+        "creation_date": "2025-06-21 19:13:18"
     },
     {
         "title": "Nacharbeit",
@@ -14,8 +13,7 @@
         "category": "Arbeit",
         "status": "in Bearbeitung",
         "due_date": null,
-        "creation_date": "2025-06-21 19:13:18",
-        "font_info": null
+        "creation_date": "2025-06-21 19:13:18"
     },
     {
         "title": "Aufräumen",
@@ -23,17 +21,15 @@
         "category": "zu Hause",
         "status": "in Bearbeitung",
         "due_date": null,
-        "creation_date": "2025-06-21 19:13:18",
-        "font_info": null
+        "creation_date": "2025-06-21 19:13:18"
     },
     {
-        "title": "Wartung DampferR",
-        "description": "Watte und Coil wechseln XD",
+        "title": "Wartung Dampfer",
+        "description": "Watte und Coil wechseln",
         "category": "zu Hause",
         "status": "in Bearbeitung",
         "due_date": null,
-        "creation_date": "2025-06-21 19:13:18",
-        "font_info": null
+        "creation_date": "2025-06-21 19:13:18"
     },
     {
         "title": "Säule programmieren",
@@ -41,8 +37,7 @@
         "category": "Arbeit",
         "status": "unterbrochen",
         "due_date": "2025-07-01 10:03:41",
-        "creation_date": "2025-06-30 22:05:24",
-        "font_info": null
+        "creation_date": "2025-06-30 22:05:24"
     },
     {
         "title": "Test",
@@ -50,28 +45,14 @@
         "category": "Arbeit",
         "status": "in Bearbeitung",
         "due_date": "2025-07-01 21:48:47",
-        "creation_date": "2025-07-01 21:48:08",
-        "font_info": null
+        "creation_date": "2025-07-01 21:48:08"
     },
     {
         "title": "Test2",
         "description": "Test Aufgabe",
         "category": "zu Hause",
-        "status": "Erledigt",
-        "due_date": "2025-07-01 21:56:19",
-        "creation_date": "2025-07-01 21:53:39",
-        "font_info": null
-    },
-    {
-        "title": "Test SChriftart",
-        "description": "wefwefsfsdafasf\n\nsadfwefwef",
-        "category": "Arbeit",
         "status": "in Bearbeitung",
-        "due_date": null,
-        "creation_date": "2025-07-01 22:47:29",
-        "font_info": {
-            "family": "Script MT",
-            "size": 9
-        }
+        "due_date": "2025-07-01 21:56:19",
+        "creation_date": "2025-07-01 21:53:39"
     }
 ]

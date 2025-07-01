@@ -75,13 +75,13 @@ class _ButtonAnimationHandler(QObject):
             original_geo.width() - shrink,
             original_geo.height() - shrink
         )
-        self.geometry_animation.setDuration(100)
+        self.geometry_animation.setDuration(80)
         self.geometry_animation.setStartValue(original_geo)
         self.geometry_animation.setEndValue(pressed_geo)
 
         # 2. Farb-Animation (abdunkeln)
         self.colorize_effect.setColor(QColor("black"))  # Effektfarbe auf Schwarz setzen
-        self.color_animation.setDuration(100)
+        self.color_animation.setDuration(80)
         self.color_animation.setStartValue(0.0)
         self.color_animation.setEndValue(0.25)  # 25% Abdunkelung
 
@@ -96,8 +96,8 @@ class _ButtonAnimationHandler(QObject):
         self.color_animation.stop()
 
         # 1. Geometrie-Animation (zurückfedern)
-        offset = 3
-        shrink = offset * 3
+        offset = 2
+        shrink = offset * 2
         original_geo = QRect(
             self.button.x() - offset,
             self.button.y() - offset,
@@ -111,7 +111,7 @@ class _ButtonAnimationHandler(QObject):
 
         # 2. Farb-Animation (aufblitzen)
         self.colorize_effect.setColor(QColor("white"))  # Effektfarbe auf Weiß setzen
-        self.color_animation.setDuration(300)
+        self.color_animation.setDuration(400)
         self.color_animation.setStartValue(0.0)
         self.color_animation.setKeyValueAt(0.25, 0.3)  # Kurzer heller Blitz
         self.color_animation.setKeyValueAt(1.0, 0.0)  # Vollständiges Ausblenden

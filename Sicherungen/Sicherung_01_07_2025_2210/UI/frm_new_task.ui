@@ -2,9 +2,6 @@
 <ui version="4.0">
  <class>frm_new_task</class>
  <widget class="QWidget" name="frm_new_task">
-  <property name="windowModality">
-   <enum>Qt::WindowModality::ApplicationModal</enum>
-  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -469,6 +466,22 @@
  </widget>
  <resources/>
  <connections>
+  <connection>
+   <sender>pb_close</sender>
+   <signal>clicked()</signal>
+   <receiver>frm_new_task</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>686</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>270</x>
+     <y>364</y>
+    </hint>
+   </hints>
+  </connection>
   <connection>
    <sender>cbx_show_timeedit</sender>
    <signal>clicked(bool)</signal>

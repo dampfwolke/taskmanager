@@ -25,7 +25,6 @@ class Ui_frm_new_task(object):
     def setupUi(self, frm_new_task):
         if not frm_new_task.objectName():
             frm_new_task.setObjectName(u"frm_new_task")
-        frm_new_task.setWindowModality(Qt.WindowModality.ApplicationModal)
         frm_new_task.resize(470, 689)
         self.verticalLayout_3 = QVBoxLayout(frm_new_task)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -249,6 +248,7 @@ class Ui_frm_new_task(object):
 
 
         self.retranslateUi(frm_new_task)
+        self.pb_close.clicked.connect(frm_new_task.close)
         self.cbx_show_timeedit.clicked["bool"].connect(self.wg_time_expand.setVisible)
         self.fcb_description.currentFontChanged.connect(self.te_description.setCurrentFont)
 

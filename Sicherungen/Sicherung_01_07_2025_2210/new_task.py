@@ -30,8 +30,6 @@ class NewTask(qtw.QDialog, Ui_frm_new_task):
         super().__init__(parent)
         self.setupUi(self)
 
-        self.setAttribute(qtc.Qt.WidgetAttribute.WA_DeleteOnClose)
-
         # Das zu bearbeitende Task-Objekt speichern
         self.current_task = task_to_edit
 
