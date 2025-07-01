@@ -1,65 +1,10 @@
 [
     {
-        "title": "Pgm-Änderung IFW",
-        "description": "Kulisse Pgm anpassen",
-        "category": "Arbeit",
-        "status": "Erledigt",
-        "due_date": null,
-        "creation_date": "2025-06-21 19:13:18",
-        "font_info": null
-    },
-    {
-        "title": "Nacharbeit",
-        "description": "NA-Pgm Gtech erstellen",
-        "category": "Arbeit",
-        "status": "in Bearbeitung",
-        "due_date": null,
-        "creation_date": "2025-06-21 19:13:18",
-        "font_info": null
-    },
-    {
-        "title": "Aufräumen",
-        "description": "Abwaschen dann Staubsaugen und Fenster putzen",
+        "title": "Dampfer Wartung",
+        "description": "Dampfer Watte und Coil wechseln",
         "category": "zu Hause",
-        "status": "in Bearbeitung",
+        "status": "noch nicht angefangen",
         "due_date": null,
-        "creation_date": "2025-06-21 19:13:18",
-        "font_info": null
-    },
-    {
-        "title": "Wartung DampferR",
-        "description": "Watte und Coil wechseln XD",
-        "category": "zu Hause",
-        "status": "in Bearbeitung",
-        "due_date": null,
-        "creation_date": "2025-06-21 19:13:18",
-        "font_info": null
-    },
-    {
-        "title": "Säule programmieren",
-        "description": "G-Tech Säulen  fertig programmieren",
-        "category": "Arbeit",
-        "status": "unterbrochen",
-        "due_date": "2025-07-01 10:03:41",
-        "creation_date": "2025-06-30 22:05:24",
-        "font_info": null
-    },
-    {
-        "title": "Test",
-        "description": "Test Due Date",
-        "category": "Arbeit",
-        "status": "in Bearbeitung",
-        "due_date": "2025-07-01 21:48:47",
-        "creation_date": "2025-07-01 21:48:08",
-        "font_info": null
-    },
-    {
-        "title": "Test2",
-        "description": "Test Aufgabe",
-        "category": "zu Hause",
-        "status": "Erledigt",
-        "due_date": "2025-07-01 21:56:19",
-        "creation_date": "2025-07-01 21:53:39",
-        "font_info": null
+        "creation_date": "2025-07-01 23:32:14"
     }
 ]
