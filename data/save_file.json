@@ -6,5 +6,13 @@
         "status": "Erledigt",
         "due_date": null,
         "creation_date": "2025-07-01 23:32:14"
+    },
+    {
+        "title": "Dampfpause",
+        "description": "Dampfen gehen",
+        "category": "Arbeit",
+        "status": "Erledigt",
+        "due_date": "2025-07-02 07:58:09",
+        "creation_date": "2025-07-02 06:16:51"
     }
 ]

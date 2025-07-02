@@ -31,7 +31,7 @@ class MainWindow(qtw.QMainWindow, Ui_frm_main_window):
         self.animator = SidePanelAnimator(parent_window=self, animated_widget_name="wg_main_description",
                                           toggle_button_name="pb_show_description")
 
-        animated_buttons = ["pb_new_task", "pb_show_description", "pb_finish_task", "pb_edit_task"]
+        animated_buttons = ["pb_show_description", "pb_finish_task", "pb_edit_task"]
         self.button_animator = ButtonAnimator(self, animated_buttons)
 
         # NEU: Timer für regelmäßige UI-Updates initialisieren
