@@ -21,7 +21,7 @@ try:
     SCRIPT_DIR = Path(__file__).parent.resolve()
     DLL_DIR = SCRIPT_DIR / "Everything-SDK" / "dll"  # Beispielhafter relativer Pfad
     if not DLL_DIR.exists():  # Fallback auf Ihren angegebenen Pfad
-        DLL_DIR = Path("C:\\Users\\Ismail\\Desktop\\Zielordner\\Everything-SDK\\dll\\").resolve()
+        DLL_DIR = Path("C:\\Users\\hasanovic\\Desktop\\Everything API\\dll\\").resolve()
 
     # Automatisch 64-bit oder 32-bit DLL wählen (basierend auf Python-Architektur)
     if ctypes.sizeof(ctypes.c_void_p) == 8:  # 64-bit Python
