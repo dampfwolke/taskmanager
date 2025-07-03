@@ -14,5 +14,29 @@
         "status": "Erledigt",
         "due_date": "2025-07-02 07:58:09",
         "creation_date": "2025-07-02 06:16:51"
+    },
+    {
+        "title": "Prompt Python üben",
+        "description": "gib mir eine pyhton übungsaufgabe für leicht fortgeschrittene. Zeige mir keine Lösung da ich selber üben will. Sage mir auch nicht welche Funktionen und methoden ich dabei verwenden soll da ich das selber üben will. Sage mir nur die Aufgabenstellung und was der Output sein soll.",
+        "category": "Sonstige",
+        "status": "noch nicht angefangen",
+        "due_date": null,
+        "creation_date": "2025-07-02 22:51:32"
+    },
+    {
+        "title": "Blankmaker Spannmittelauswahl",
+        "description": "Spannmittelauswahl (Combobox) soll automatisch anhand der Rohteilabmaße das richtige Spannmittel vorauswählen.\nEine Änderung soll später noch möglich sein (nur ein Vorschlag).",
+        "category": "Arbeit",
+        "status": "noch nicht angefangen",
+        "due_date": null,
+        "creation_date": "2025-07-03 17:09:26"
+    },
+    {
+        "title": "Blankmaker Everything API",
+        "description": "Wenn die Zeichnungsnummer ins lineentry eingefügt wird soll automatisch ein Suche mit der Everything API gestartet werden, um zu sehen ob der Teil schon Mal programmiert wurde.",
+        "category": "Arbeit",
+        "status": "noch nicht angefangen",
+        "due_date": null,
+        "creation_date": "2025-07-03 17:10:21"
     }
 ]
